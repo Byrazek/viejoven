@@ -1,0 +1,59 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body>
+
+		<header class="flex items-center">
+			<img src="/viejoven.png" alt="viejoven">
+			<div class="flex justify-around items-center">
+				<a href="/" class="text-2xl text-stone-600">Home</a>
+				<a href="/libro" class="text-2xl text-stone-600">Libro</a>
+				<a href="/about" class="text-2xl text-stone-600">Sobre mí</a>
+			</div>
+		</header>
+		<div class="raya bg-black"></div>
+
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	* {
+		border: 0px solid red;
+	}
+	.raya {
+		margin-left: 5%;
+		width: 90%;
+		height: 2px;
+	}
+	header {
+		height: 75px;
+	}
+	header div {
+		height: 70%;
+		width: 20%;
+		margin-left: 5%;
+	}
+	header img {
+		margin-left: 5%;
+		width: auto;
+		height: 90%;
+	}
+</style>
