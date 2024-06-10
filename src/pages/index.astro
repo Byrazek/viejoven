@@ -1,31 +1,108 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="VIEJOVEN">
 	<div class="estructura">
-		<div class="flex flex-col">
-			<img src="/viejoven.png" alt="viejoven">
-			<p class="micolor text-2xl text-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ullam non rerum voluptatum.</p>
+		<img class="logo" src="/viejoven.png" alt="viejoven" />
+		<img
+			class="libro flex justify-end items-end"
+			src="/libro.png"
+			alt="libro"
+		/>
+
+		<div id="descripcion" class="descripcion flex">
+			<img src="/viejoven.png" alt="viejoven" />
+			<div class="micolor text-2xl flex items-center text-bold text-center">
+				Descripcion del proyecto. Lorem ipsum dolor, sit amet consectetur
+				adipisicing elit. Accusantium modi illum repellat dolores esse enim
+				rerum sequi atque neque distinctio, aspernatur consectetur natus eum.
+				Odit tenetur voluptatibus tempore fugit accusantium?
+			</div>
+		</div>
+
+		<div id="refranes" class="refranes micolor flex flex-wrap text-2xl">
+			<div>No hay mal que por bien no venga.</div>
+			<div>“Todo lo malo puede acabar yendo para bien.”</div>
+			<div>El que tiene un Amigo Tiene un Tesoro.</div>
+
+			<div class="mt-10">“Si cuentas con un Bro, ya tienes algo de valor.”</div>
+			<div class="mt-10">Cuando el río suena, agua lleva.</div>
+			<div class="mt-10">Donde hay confianza , da asco.</div>
+
+			<div class="mt-10">Más vale pájaro en mano que ciento volando.</div>
+		</div>
+
+		<div id="merch" class="merch">
+			<div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+				<h2 class="text-2xl font-bold tracking-tight text-gray-900">Packagin & Merchandaisin</h2>
+		
+				<div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+					<div class="group relative">
+						<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-3xl bg-stone-400 lg:aspect-none group-hover:opacity-75 lg:h-80">
+							<img src="packagin.png" alt="packagin" class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+						</div>
+					</div>
+					<div class="group relative">
+						<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-3xl bg-stone-400 lg:aspect-none group-hover:opacity-75 lg:h-80">
+							<img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Merchandaising" class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+						</div>
+					</div>
+					<div class="group relative">
+						<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-3xl bg-stone-400 lg:aspect-none group-hover:opacity-75 lg:h-80">
+							<img src="packagin-2.png" alt="packagin2" class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+						</div>
+					</div>
+					<div class="group relative">
+						<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-3xl bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+							<img src="libro.png" alt="libro." class="h-full w-full object-contain object-center lg:h-full lg:w-full">
+						</div>
+					</div>
+		
+					<!-- More products... -->
+				</div>
+			</div>
 		</div>
 	</div>
-	
 </Layout>
 
 <style>
-  :root {
-		background-color: whitesmoke;
+	:root {
+		/* background-color: whitesmoke; */
 	}
 	.estructura {
 		margin-top: 5%;
 		margin-left: 10%;
 		width: 80%;
 	}
-	.estructura div {
-		width: 50%;
-		height: auto;
+	.libro {
+		left: 0;
+		width: 35%;
+		position: relative;
 	}
-	.micolor{
-		color: #203D91;
+	.logo {
+		left: 40%;
+		z-index: 1;
+		position: absolute;
+		width: 50%;
+	}
+	.descripcion {
+		margin-top: 10%;
+	}
+	.descripcion img {
+		width: 50%;
+	}
+	.descripcion div {
+		margin-left: 10%;
+		width: 30%;
+	}
+	.refranes {
+		margin-top: 10%;
+	}
+	.refranes div {
+		margin-left: 8%;
+	}
+	.merch {
+		margin-top: 10%;
 	}
 </style>

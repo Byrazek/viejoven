@@ -13,35 +13,69 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/viejoven.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body>
+	<body id="home" class="container-body">
+		
+		<div class="fondo"></div>
 
-		<header class="flex items-center">
-			<img src="/viejoven.png" alt="viejoven">
-			<div class="flex justify-around items-center">
-				<a href="/" class="text-2xl text-stone-600">Home</a>
-				<a href="/libro" class="text-2xl text-stone-600">Libro</a>
-				<a href="/about" class="text-2xl text-stone-600">Sobre mí</a>
-			</div>
-		</header>
-		<div class="raya bg-black"></div>
-
-		<slot />
+		<div class="container-page">
+			<header class="flex items-center">
+				<img src="/viejoven.png" alt="viejoven">
+				<div class="flex justify-around items-center">
+					<a data-scroll href="#home" class="ml-16 text-2xl text-stone-500">Home</a>
+					<a data-scroll href="#descripcion" class="ml-16 text-2xl text-stone-500">Descripcion</a>
+					<a data-scroll href="#refranes" class="ml-16 text-2xl text-stone-500">Refranes</a>
+					<a data-scroll href="#merch" class="ml-16 text-2xl text-stone-500">Merch</a>
+				</div>
+			</header>
+			<div class="raya bg-stone-400"></div>
+			
+	
+			<slot />
+		</div>
 	</body>
 </html>
 
 <style is:global>
+	:root {
+		scroll-behavior: smooth;
+	}
 	* {
 		border: 0px solid red;
+	}
+	.container-body {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		overflow: scroll;
+	}
+	.fondo {
+		top: 0;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: url("paper.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 30%;
+	}
+	.container-page {
+		position: relative;
+		z-index: 1;
 	}
 	.raya {
 		margin-left: 5%;
 		width: 90%;
 		height: 2px;
+	}
+	.micolor{
+		color: #203D91;
 	}
 	header {
 		height: 75px;
