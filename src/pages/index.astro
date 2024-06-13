@@ -4,23 +4,22 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="VIEJOVEN">
 	<div class="estructura">
+		<!-- Logo y libro. Principio de la pagina -->
 		<img class="logo" src="/viejoven.png" alt="viejoven" />
+		<div class="text-logo"></div>
 		<img
 			class="libro flex justify-end items-end"
 			src="/libro.png"
 			alt="libro"
 		/>
-
+		<!-- Descripcion -->
 		<div id="descripcion" class="descripcion flex">
 			<img src="/viejoven.png" alt="viejoven" />
 			<div class="micolor text-2xl flex items-center text-bold text-center">
-				Descripcion del proyecto. Lorem ipsum dolor, sit amet consectetur
-				adipisicing elit. Accusantium modi illum repellat dolores esse enim
-				rerum sequi atque neque distinctio, aspernatur consectetur natus eum.
-				Odit tenetur voluptatibus tempore fugit accusantium?
+				El libro “El Refranero de un Viejoven” es la pieza Principal del proyecto, desde la recopilación y selección de los refranes hasta su reinterpretación en un lenguaje moderno y actual.El libro presenta una serie de refranes tradicionales, cada uno acompañado de su explicación y reinterpretación contemporánea. Esta adaptación busca mantener la esencia de los refranes originales, adaptándolos al contexto y lenguaje de hoy en día.Cada refrán se presenta con una  tipografía que reflejan tanto el estilo tradicional como el moderno. Este enfoque resalta la dualidad entre el pasado y el presente, mostrando la relevancia de los refranes en la vida actual.
 			</div>
 		</div>
-
+		<!-- Refranes -->
 		<div id="refranes" class="refranes micolor flex flex-wrap text-2xl">
 			<div>No hay mal que por bien no venga.</div>
 			<div>“Todo lo malo puede acabar yendo para bien.”</div>
@@ -32,10 +31,10 @@ import Layout from "../layouts/Layout.astro";
 
 			<div class="mt-10">Más vale pájaro en mano que ciento volando.</div>
 		</div>
-
+		<!-- Merchandaising -->
 		<div id="merch" class="merch">
 			<div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-				<h2 class="text-2xl font-bold tracking-tight text-gray-900">Packagin & Merchandaisin</h2>
+				<h2 class="text-2xl font-bold tracking-tight text-gray-900">Packagin & Shop</h2>
 		
 				<div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 					<div class="group relative">
@@ -85,6 +84,9 @@ import Layout from "../layouts/Layout.astro";
 		z-index: 1;
 		position: absolute;
 		width: 50%;
+	}
+	.text-logo {
+		position: absolute;
 	}
 	.descripcion {
 		margin-top: 10%;

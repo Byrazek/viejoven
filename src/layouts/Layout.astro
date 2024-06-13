@@ -23,13 +23,13 @@ const { title } = Astro.props;
 		<!-- <div class="fondo"></div> -->
 
 		<div class="container-page">
-			<header class="flex items-center">
+			<header class="flex justify-self-end items-center">
 				<img src="/viejoven.png" alt="viejoven">
-				<div class="flex justify-around items-center">
-					<a data-scroll href="#home" class="ml-16 text-2xl text-stone-500">Home</a>
-					<a data-scroll href="#descripcion" class="ml-16 text-2xl text-stone-500">Descripcion</a>
-					<a data-scroll href="#refranes" class="ml-16 text-2xl text-stone-500">Refranes</a>
-					<a data-scroll href="#merch" class="ml-16 text-2xl text-stone-500">Merch</a>
+				<div class="menu flex justify-around items-center">
+					<a data-scroll href="#home" class="ml-16 text-2xl text-stone-500">ABOUT</a>
+					<a data-scroll href="#descripcion" class="ml-16 text-2xl text-stone-500">PRODUCT</a>
+					<a data-scroll href="#refranes" class="ml-16 text-2xl text-stone-500">CONTACT</a>
+					<a data-scroll href="#merch" class="ml-16 text-2xl text-stone-500">SHOP</a>
 				</div>
 			</header>
 			<div class="raya bg-stone-400"></div>
@@ -46,6 +46,9 @@ const { title } = Astro.props;
 	}
 	* {
 		border: 0px solid red;
+	}
+	.menu {
+		width: 100%;
 	}
 	.container-body {
 		position: relative;
