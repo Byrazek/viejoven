@@ -5,8 +5,11 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="VIEJOVEN">
 	<div class="estructura">
 		<!-- Logo y libro. Principio de la pagina -->
-		<img class="logo" src="/viejoven.png" alt="viejoven" />
-		<div class="text-logo"></div>
+		<div class="section-logo flex flex-col justify-center items-center">
+			<img class="" src="/viejoven.png" alt="viejoven" />
+			<div class="text-logo micolor miletra text-3xl text-center">"Un Libro en mano, una camiseta puesta, el Viejoven siempre está de Fiesta."</div>
+		</div>
+		
 		<img
 			class="libro flex justify-end items-end"
 			src="/libro.png"
@@ -15,12 +18,12 @@ import Layout from "../layouts/Layout.astro";
 		<!-- Descripcion -->
 		<div id="descripcion" class="descripcion flex">
 			<img src="/viejoven.png" alt="viejoven" />
-			<div class="micolor text-2xl flex items-center text-bold text-center">
+			<div class="micolor miletra text-2xl flex items-center text-bold text-center">
 				El libro “El Refranero de un Viejoven” es la pieza Principal del proyecto, desde la recopilación y selección de los refranes hasta su reinterpretación en un lenguaje moderno y actual.El libro presenta una serie de refranes tradicionales, cada uno acompañado de su explicación y reinterpretación contemporánea. Esta adaptación busca mantener la esencia de los refranes originales, adaptándolos al contexto y lenguaje de hoy en día.Cada refrán se presenta con una  tipografía que reflejan tanto el estilo tradicional como el moderno. Este enfoque resalta la dualidad entre el pasado y el presente, mostrando la relevancia de los refranes en la vida actual.
 			</div>
 		</div>
 		<!-- Refranes -->
-		<div id="refranes" class="refranes micolor flex flex-wrap text-2xl">
+		<div id="refranes" class="refranes micolor miletra flex flex-wrap text-2xl">
 			<div>No hay mal que por bien no venga.</div>
 			<div>“Todo lo malo puede acabar yendo para bien.”</div>
 			<div>El que tiene un Amigo Tiene un Tesoro.</div>
@@ -74,6 +77,11 @@ import Layout from "../layouts/Layout.astro";
 		margin-left: 10%;
 		width: 80%;
 	}
+	.section-logo {
+		position: absolute;
+		left: 40%;
+		width: 50%;
+	}
 	.libro {
 		left: 0;
 		width: 35%;
@@ -86,7 +94,12 @@ import Layout from "../layouts/Layout.astro";
 		width: 50%;
 	}
 	.text-logo {
-		position: absolute;
+		height: 15%;
+		width: 60%;
+		/* position: absolute;
+		top: 30%;
+		left: 46%; */
+		/* font-family: ; */
 	}
 	.descripcion {
 		margin-top: 10%;
